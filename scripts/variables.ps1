@@ -1,5 +1,5 @@
 ﻿# basics
-$index = "04"
+$index = "06"
 $rgName = "pbiRg" + $index
 $location = "EastUS"
 $admin = "greg@golivewaad.onmicrosoft.com"
@@ -10,7 +10,7 @@ $storageAcctName = "pbistoragetest" + $index
 $containerName = "devops"
 $containerSasUriBase = "https://$storageAcctName.blob.core.windows.net/$containerName/"
 
-$dwBacpacFile = "$devFolder\db\dw.bacpac"
+$dwBacpacFile = "$devFolder\db\dwAdventureWorks.bacpac"
 $dwBacpacBlob = "dw.bacpac"
 $dwBacpacURI = "http://$storageAcctName.blob.core.windows.net/$containerName/$dwBacpacBlob"
 

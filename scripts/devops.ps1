@@ -22,12 +22,6 @@ Set-AzureStorageBlobContent -File $dwBacpacFile `
   -Blob $dwBacpacBlob `
   -Context $storageContext
 
-# pbi
-New-AzureRmPowerBIEmbeddedCapacity -resourceGroupName $rgName -location $location -name $capName -sku $capSku -administrator $admin
-
-# ssas
-New-AzureRmAnalysisServicesServer -resourceGroupName $rgName -location $location -name $ssasName -sku $ssasSku -administrator $admin
-
 # get my IP
 $response = wget -uri "ipinfo.io/ip"
 # $externalIP = (ConvertFrom-jSON -inputObject $response.content).ip
@@ -41,7 +35,6 @@ $endingIP = $externalIP.substring(0,$secondDot+1) + "255.255"
 New-AzureRmSqlServer -resourceGroupName $rgName -location $location -serverName $sqlSvrName -SqlAdministratorCredentials $sqlSvrCreds
 New-AzureRmSqlServerFirewallRule -ResourceGroupName $rgName -AllowAllAzureIPs -ServerName $sqlSvrName
 New-AzureRmSqlServerFirewallRule -ResourceGroupName $rgName -ServerName $sqlSvrName -FirewallRuleName "devOpsClient" -StartIpAddress $startingIP -EndIpAddress $endingIP
-# New-AzureRmSQLDatabase -resourceGroupName $rgName -serverName $sqlSvrName -databaseName $dbName -RequestedServiceObjectiveName $sqlSvrTier
 
 # install the schema as a customer data warehouse
 $importRequest = New-AzureRmSqlDatabaseImport -ResourceGroupName $rgName `
