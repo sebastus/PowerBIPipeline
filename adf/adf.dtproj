@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">GOLIVE-BOOKII</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAADZ6DMzv3jP3mPTblwlzgJAW7e5tWKlHVi5QaDvx/CGnAAAAAAOgAAAAAIAACAAAACgXv7LEiKCckuVqhB9pakzWOmHPA7sw6F9itu+CVU0N5AAAAA0jQWO1YQYN2zcah2dyywjyuWBob/rWQtdqb/riaAbR48A3pgjGU1CSWiSYFEaGnjmYD+9og/sCDGGleyAHjrzxOyGpnF28piYrkd9WD58tNrHDENMrlsU76chNyevmYh+CcCua1R316TgmdM8ghjBF1B1nhK+wwk6m6XpSGRF2Jn+CtmRvpFqrGlT64iKKB1AAAAA5LDEKr2/SaF6QkxJTxXS7wSCqJrEH9dhOcXp+CEEkHuj+xqft1NGQOYEDIqLGSDGws8vCEgRrWUcfoLOUZ6IoQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAAFZMZG15b35oiS9tVTgWS5j6VoyLWXN2HH9Nt2xkWM2wAAAAAOgAAAAAIAACAAAADxPqBjtXethNYP/s9viqEqzP3A39mCbWkl/oY6R09Cg5AAAAAnE5drATFArJT30gblAxa3DEGiwXOyL+ey3JDj/bzrHbEn16vpYmoNFkEyIo6a3jt+ryumQUvTsVybFUOO/Fo2m5aw89v2+5TXz5t4zMpjQxj3v1+N1nUjPDyAYJaE++7UdRLMwnpG6jevQKg9AHPgmvqeqY6NlUwj6Ig5lKNNQIDUyGDNAIZt0Dus1PhHm5tAAAAAdtt5pk/zcRFCp84/ow3k65USsf2iCaNgsI70Lri62YsVnElBWQUSprIqFEgBdgiW1JLJOohtwfonyWgaRueFng==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -50,7 +50,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=sqldeveloper.eastus.cloudapp.azure.com;User ID=greg;Initial Catalog=DEV-Payments;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=sqldeveloper.eastus.cloudapp.azure.com;User ID=greg;Initial Catalog=AdventureWorks2016CTP3;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -65,7 +65,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">DEV-Payments</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">AdventureWorks2016CTP3</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -139,7 +139,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=mppsqlbox03.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=mppsqlbox03.database.windows.net;User ID=greg;Initial Catalog=AdventureWorksDW;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -154,7 +154,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">dwCustomer1</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">AdventureWorksDW</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -225,10 +225,10 @@
                 <SSIS:Property SSIS:Name="Name">aasProcess</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6961A6B5-015B-48F3-AFCE-671E3D52AFCF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{51EE8A68-FF02-49D0-A45F-E94533FB2FC8}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -242,10 +242,10 @@
                 <SSIS:Property SSIS:Name="Name">adfEtl</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{88EFD5ED-E84A-45C1-B2A5-D1B8EDA295A5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{87F3252C-CE63-4C0A-B32E-C7325421563C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -270,7 +270,13 @@
         <ConnectionSecurityMappings />
         <DatabaseStorageLocations />
         <TargetServerVersion>SQLServer2017</TargetServerVersion>
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2018-06-08T10:55:02.1894608Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>

@@ -5,10 +5,10 @@
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=mppsqlbox03.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;">
+      DTS:ConnectionString="Data Source=pbisqlbox04.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAAKmhmQkJUva43wsRetq4FvB/UcQu5L5pIaYMDrtJ0bNwAAAAAOgAAAAAIAACAAAABu6QCH6BrU9N+viXdwLXMF3t37xifiUBgi6MwkXifrQYAAAAC6PKRmZgO9gthraABaPa/KeTCguDH81Qt/ZLbFvfyl0sbDS6vr2e3EDLVoGRo6jf/eLJBSePrtVfLU1N8k/BxiNklJ7+8qX//GyE/HzBBA/NC1dW4SzbIHeLnmX3aOC0f2nAmWZoVJ5MFRUFGoVU91fRkfa1KC0cBsiQAeVi6ppUAAAABrrXZBPR+yweVdIIfkuMIiJ4a2Cv4jUrCt1Zt72ur5f/1X8htcSic3EZpMWDuFG0tfZaxOyMlYcLikUKiqFcLx</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAB/9Od2BKRH0jzahXL/GtiNrznuh1qEXebcYgA5pHp80wAAAAAOgAAAAAIAACAAAACHLbX0uH94oHYDrsW9wKald5kV33McAZ59jOnpiNkp/4AAAABsVYxAxlo7QqBdhP2xzdOmMXBAby7dTKk65x0BeQyIGzs5ZaS9r6BPrts5Yahiqcxn3pvvAdD1iVKilP4R09z3RVkoaG9UQnfGzGINYb3bF/uYkPZZO8vVkTsjsl2YPU+LukLWmWreVvxTfM6OUL6Uz/dcN+yxCJM/V9PRqkkcrkAAAAChyvn0RCQ8KZI6azys46t6KSPs1+DizQqdbvMpOip4BpsQds+3qMTgnbvubPj4tRWuZjLlbagVuSpmNrNZJs+m</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
