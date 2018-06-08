@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="source_db"
+  DTS:DTSID="{606AEA12-FF07-4659-8DCA-AA01D549DF36}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=sqldeveloper.eastus.cloudapp.azure.com;User ID=greg;Initial Catalog=DEV-Payments;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAADfdF3qkDwhzdpf4TbDaVbCJwxAd+zg74uMlZNgjsfHwAAAAAAOgAAAAAIAACAAAACeqM6hs4qzzbr6QaV7r5sObs3OkkUMbb1WsoFpJW8IB4AAAABET3rHy4VQBlc2nF25NRq5IK3w+ceWb0H2boAul0i59CCDdYzURGFh+UDoHlWJTmHG1g3yqocFVCxNNJSx4vrJj/HqSfUSilErWypdvFTT6QjtAP23zfTCC4knRa9sCawjZomePacdRAla6tTuukSGScS2IrTNMYUhD9VHBfL9kkAAAACrxvh+bJr72oxUYXrc6KA1MzbhUrWeDkND8KhQ1vwjRpdRHtGj2l5am+6D1eISKFUofI3HAONrMc5+Pr+5u2ie</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

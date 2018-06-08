@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="target_dw"
+  DTS:DTSID="{6BB1EA63-C90D-47A3-9B6E-222B5768E3F4}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=mppsqlbox03.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAAKmhmQkJUva43wsRetq4FvB/UcQu5L5pIaYMDrtJ0bNwAAAAAOgAAAAAIAACAAAABu6QCH6BrU9N+viXdwLXMF3t37xifiUBgi6MwkXifrQYAAAAC6PKRmZgO9gthraABaPa/KeTCguDH81Qt/ZLbFvfyl0sbDS6vr2e3EDLVoGRo6jf/eLJBSePrtVfLU1N8k/BxiNklJ7+8qX//GyE/HzBBA/NC1dW4SzbIHeLnmX3aOC0f2nAmWZoVJ5MFRUFGoVU91fRkfa1KC0cBsiQAeVi6ppUAAAABrrXZBPR+yweVdIIfkuMIiJ4a2Cv4jUrCt1Zt72ur5f/1X8htcSic3EZpMWDuFG0tfZaxOyMlYcLikUKiqFcLx</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
