@@ -11,20 +11,328 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="adfEtl"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{88EFD5ED-E84A-45C1-B2A5-D1B8EDA295A5}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{183112D4-D2E4-447F-BC83-022728B4F8C8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\Copy Account Records"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{88463EEB-EFD8-4054-A62A-650AC745BAEC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Copy Account Records"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Copy Account Records\source_db"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="source_db"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [AccountID]
+      ,[AccountStatusID]
+      ,[UKI]
+FROM [DEV-Payments].[dbo].[Account]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Copy Account Records\source_db.Connections[OleDbConnection]"
+                  connectionManagerID="{606AEA12-FF07-4659-8DCA-AA01D549DF36}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[source_db]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[AccountID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].ExternalColumns[AccountID]"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[AccountID]"
+                      name="AccountID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[AccountStatusID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].ExternalColumns[AccountStatusID]"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[AccountStatusID]"
+                      name="AccountStatusID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[UKI]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].ExternalColumns[UKI]"
+                      length="255"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[UKI]"
+                      name="UKI"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].ExternalColumns[AccountID]"
+                      dataType="i4"
+                      name="AccountID" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].ExternalColumns[AccountStatusID]"
+                      dataType="i4"
+                      name="AccountStatusID" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].ExternalColumns[UKI]"
+                      dataType="wstr"
+                      length="255"
+                      name="UKI" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[AccountID]"
+                      dataType="i4"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[AccountID]"
+                      name="AccountID" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[AccountStatusID]"
+                      dataType="i4"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[AccountStatusID]"
+                      name="AccountStatusID" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[UKI]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[UKI]"
+                      name="UKI" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Copy Account Records\target_dw"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="target_dw"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Account]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Copy Account Records\target_dw.Connections[OleDbConnection]"
+                  connectionManagerID="{6BB1EA63-C90D-47A3-9B6E-222B5768E3F4}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[target_dw]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].Columns[AccountID]"
+                      cachedDataType="i4"
+                      cachedName="AccountID"
+                      externalMetadataColumnId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].ExternalColumns[AccountId]"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[AccountID]" />
+                    <inputColumn
+                      refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].Columns[AccountStatusID]"
+                      cachedDataType="i4"
+                      cachedName="AccountStatusID"
+                      externalMetadataColumnId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].ExternalColumns[AccountStatusId]"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[AccountStatusID]" />
+                    <inputColumn
+                      refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].Columns[UKI]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="UKI"
+                      externalMetadataColumnId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output].Columns[UKI]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].ExternalColumns[AccountId]"
+                      dataType="i4"
+                      name="AccountId" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="255"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input].ExternalColumns[AccountStatusId]"
+                      dataType="i4"
+                      name="AccountStatusId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Copy Account Records\target_dw.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Copy Account Records\target_dw.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Copy Account Records\target_dw.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Copy Account Records\target_dw.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Copy Account Records\target_dw.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Copy Account Records.Paths[OLE DB Source Output]"
+              endId="Package\Copy Account Records\target_dw.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Copy Account Records\source_db.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Account Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{D44B23A8-56E6-4267-88A2-658AB7C5E8D6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="Truncate Account Table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -35,6 +343,16 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DA3FA37F-EE9F-4B65-8E1F-5BE91D6147A5}"
+      DTS:From="Package\Truncate Account Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Copy Account Records" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -46,13 +364,110 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="158.857145562464,98.4941190284016" />
+          Size="190.4,41.6"
+          Id="Package\Truncate Account Table"
+          TopLeft="159.428574143624,99.1058837428638" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Copy Account Records"
+          TopLeft="167.428574279863,197.600002771265" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="256.828574211743,140.705883742864">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.8941190284016"
+              Start="0,0"
+              End="0,49.3941190284016">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.3941190284016" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Copy Account Records">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Copy Account Records\source_db"
+          TopLeft="109.714287582709,78.9176481656138" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\Copy Account Records\target_dw"
+          TopLeft="88.3571442681916,189.029414338637" />
+        <EdgeLayout
+          Id="Package\Copy Account Records.Paths[OLE DB Source Output]"
+          TopLeft="173.314287582709,120.517648165614">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.7571433145172,68.5117661730229"
+              Start="0,0"
+              End="-21.7571433145172,61.0117661730229">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2558830865114" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.2558830865114"
+                    Point2="0,34.2558830865114"
+                    Point3="-4,34.2558830865114" />
+                  <mssgle:LineSegment
+                    End="-17.7571433145172,34.2558830865114" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.7571433145172,34.2558830865114"
+                    Point2="-21.7571433145172,34.2558830865114"
+                    Point3="-21.7571433145172,38.2558830865114" />
+                  <mssgle:LineSegment
+                    End="-21.7571433145172,61.0117661730229" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Copy Account Records\source_db">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Copy Account Records\target_dw">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
