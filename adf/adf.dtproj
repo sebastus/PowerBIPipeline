@@ -26,11 +26,10 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">GOLIVE-BOOKII</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAAFZMZG15b35oiS9tVTgWS5j6VoyLWXN2HH9Nt2xkWM2wAAAAAOgAAAAAIAACAAAADxPqBjtXethNYP/s9viqEqzP3A39mCbWkl/oY6R09Cg5AAAAAnE5drATFArJT30gblAxa3DEGiwXOyL+ey3JDj/bzrHbEn16vpYmoNFkEyIo6a3jt+ryumQUvTsVybFUOO/Fo2m5aw89v2+5TXz5t4zMpjQxj3v1+N1nUjPDyAYJaE++7UdRLMwnpG6jevQKg9AHPgmvqeqY6NlUwj6Ig5lKNNQIDUyGDNAIZt0Dus1PhHm5tAAAAAdtt5pk/zcRFCp84/ow3k65USsf2iCaNgsI70Lri62YsVnElBWQUSprIqFEgBdgiW1JLJOohtwfonyWgaRueFng==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAABW35M6FWoQddsGUPeeGcYyl2hoOP0rrls+Ba1yNjbGjAAAAAAOgAAAAAIAACAAAAA1mJe5MLCRoQ8PvDG1Q8AJyw7hFUp6L2hjgQOckPnPrZAAAAAikHrVnzpMShIeLfd9vUT0YPnWNfk31V/nMFjZZYbi3SLmfXM3f0irppyd3xtAq/hY3/8DFcvpB5jyk4ZDGIeQ1x+rGDOvmz0AWHX8ZqzvAH5lVBpki1CuRtD6QdouxQXNpg/s8Twc7Bgkur6QkmOjr7abTpw0H/82LkKjdQivPxoIA143sKGBRCtIU1MIZ7tAAAAA0ty1aZXz/CkdUZnY9c/uLhLJAWt8vRg0QcBEqEjEEKMyPWCapQWQiVguH+vTmKK1QhcCCxCfvlDfezxSIrbXNg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="aasProcess.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="adfEtl.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
@@ -139,7 +138,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=mppsqlbox03.database.windows.net;User ID=greg;Initial Catalog=AdventureWorksDW;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=pbisqlbox04.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -154,7 +153,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">AdventureWorksDW</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">dwCustomer1</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -198,7 +197,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">mppsqlbox03.database.windows.net</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">pbisqlbox04.database.windows.net</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -219,33 +218,16 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="aasProcess.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{86A11B8F-86E9-4F2B-9A18-377918E00D35}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">aasProcess</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{51EE8A68-FF02-49D0-A45F-E94533FB2FC8}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="adfEtl.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{68FFC0A3-AC69-4B9A-AE8F-4B3F8F8DF90F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">adfEtl</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{87F3252C-CE63-4C0A-B32E-C7325421563C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{44A4DA40-5168-47E5-A10A-79835E35BB54}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
