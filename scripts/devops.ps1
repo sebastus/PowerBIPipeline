@@ -60,3 +60,6 @@ while ($importStatus.Status -eq "InProgress")
 [Console]::WriteLine("")
 $importStatus
 
+# ssas
+New-AzureRmAnalysisServicesServer -resourceGroupName $rgName -location $location -name $ssasName -sku $ssasSku -administrator $admin
+

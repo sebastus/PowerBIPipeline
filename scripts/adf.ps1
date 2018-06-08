@@ -45,6 +45,3 @@ Start-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $adfName `
 # pbi
 New-AzureRmPowerBIEmbeddedCapacity -resourceGroupName $rgName -location $location -name $capName -sku $capSku -administrator $admin
 
-# ssas
-New-AzureRmAnalysisServicesServer -resourceGroupName $rgName -location $location -name $ssasName -sku $ssasSku -administrator $admin
-
