@@ -1,13 +1,16 @@
-﻿$dbName = "TabularOnAzure_Divin_7c79f071-d46d-4ef2-bf6d-ad88e2b25762"
-$svrName = "asazure://eastus.asazure.windows.net/mppssasserver02"
+﻿Param(
+    [String]$aasAdminPassword,
+    [string]$dbName,
+    [string]$svrName,
+    [string]$aasAdminLogin
+)
 
-$sqlSvrLogin = "greg@golivewaad.onmicrosoft.com"
-$sqlSvrPassword = "S7perSecr3t!"
-$secpasswd = ConvertTo-SecureString $sqlSvrPassword -AsPlainText -Force
-$creds = New-Object System.Management.Automation.PSCredential($sqlSvrLogin, $secpasswd)
-$creds = Get-Credential -userName $sqlSvrLogin -Message "sql server login"
+# $dbName = "TabularProject1_Divin_453cf754-e5b2-4ddf-8b74-e2ecf361dab3"
+# $svrName = "asazure://eastus.asazure.windows.net/pbissasserver07"
+# $aasAdminLogin = "greg@golivewaad.onmicrosoft.com"
+# $aasAdminPassword = Get-Content .\password.txt
 
-Invoke-ProcessASDatabase -DatabaseName $dbName -RefreshType "Full" -Server $svrName -credential $creds
+$secpasswd = ConvertTo-SecureString $aasAdminPassword -AsPlainText -Force
+$aasAdminCreds = New-Object System.Management.Automation.PSCredential($aasAdminLogin, $secpasswd)
 
-
-
+Invoke-ProcessASDatabase -DatabaseName $dbName -RefreshType "Full" -Server $svrName -Credential $aasAdminCreds

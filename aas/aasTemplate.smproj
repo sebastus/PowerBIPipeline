@@ -8,11 +8,11 @@
     <AssemblyName>MyAssemblyName</AssemblyName>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <OutputPath>bin\</OutputPath>
-    <Name>aas</Name>
+    <Name>aasTemplate</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Development' ">
     <OutputPath>bin\</OutputPath>
-    <DeploymentServerName>asazure://eastus.asazure.windows.net/mppssasserver03</DeploymentServerName>
+    <DeploymentServerName>asazure://eastus.asazure.windows.net/pbissasserver02</DeploymentServerName>
     <DeploymentServerEdition>Developer</DeploymentServerEdition>
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
     <DeploymentServerDatabase>aas</DeploymentServerDatabase>
@@ -24,7 +24,7 @@
     <DeploymentOptionQueryImpersonation>Default</DeploymentOptionQueryImpersonation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == '' ">
-    <DeploymentServerName>asazure://eastus.asazure.windows.net/mppssasserver03</DeploymentServerName>
+    <DeploymentServerName>asazure://eastus.asazure.windows.net/pbissasserver02</DeploymentServerName>
     <DeploymentServerEdition>Developer</DeploymentServerEdition>
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
     <DeploymentServerDatabase>aas</DeploymentServerDatabase>

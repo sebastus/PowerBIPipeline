@@ -6,12 +6,12 @@
     "dataSources": [
       {
         "type": "structured",
-        "name": "SQL/pbisqlbox04 database windows net;dwCustomer1",
+        "name": "SQL/pbisqlbox02 database windows net;dwCustomerX",
         "connectionDetails": {
           "protocol": "tds",
           "address": {
-            "server": "pbisqlbox04.database.windows.net",
-            "database": "dwCustomer1"
+            "server": "pbisqlbox02.database.windows.net",
+            "database": "dwCustomerX"
           },
           "authentication": null,
           "query": null
@@ -77,7 +77,7 @@
               "type": "m",
               "expression": [
                 "let",
-                "    Source = #\"SQL/pbisqlbox04 database windows net;dwCustomer1\",",
+                "    Source = #\"SQL/pbisqlbox02 database windows net;dwCustomerX\",",
                 "    Dimension_Person = Source{[Schema=\"Dimension\",Item=\"Person\"]}[Data]",
                 "in",
                 "    Dimension_Person"

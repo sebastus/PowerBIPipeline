@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">GOLIVE-BOOKII</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAABW35M6FWoQddsGUPeeGcYyl2hoOP0rrls+Ba1yNjbGjAAAAAAOgAAAAAIAACAAAAA1mJe5MLCRoQ8PvDG1Q8AJyw7hFUp6L2hjgQOckPnPrZAAAAAikHrVnzpMShIeLfd9vUT0YPnWNfk31V/nMFjZZYbi3SLmfXM3f0irppyd3xtAq/hY3/8DFcvpB5jyk4ZDGIeQ1x+rGDOvmz0AWHX8ZqzvAH5lVBpki1CuRtD6QdouxQXNpg/s8Twc7Bgkur6QkmOjr7abTpw0H/82LkKjdQivPxoIA143sKGBRCtIU1MIZ7tAAAAA0ty1aZXz/CkdUZnY9c/uLhLJAWt8vRg0QcBEqEjEEKMyPWCapQWQiVguH+vTmKK1QhcCCxCfvlDfezxSIrbXNg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAD7GkebAysxtmGjrgGr7DPxL6f42lqtUNXz3IabIjXobAAAAAAOgAAAAAIAACAAAACbNJOwMkJKGEmvgtI7tg5qdvA5AW0MKFw9IQfVuCxhVpAAAABY3qvIDWF8pdHGLUYGco61vZNwtdWPU6UZWTdk8JAOO4mhHukux+DXCiWaiL3Ta9F+f0raklBVajkR1etQMYneuaisWg8Xe/olhR4GBDWBVcH9swVBrpRO8CS5ohQNc3SpugeyJmtCmef38gBRoE24zboqT+9ACB5y1Tptf48hviTpNXcl6I9eRRT1qpzP2mJAAAAAwQE7OEDUneUcEZtfGmLG5KMls+WpYKqhwWuXxgwxw6ShuBJrpAy9VbvbXCf4NJvwC5CV5VFVKOn7WZZtzXSuOg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -138,7 +138,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=pbisqlbox04.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=pbisqlbox06.database.windows.net;User ID=greg;Initial Catalog=dwCustomer1;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -197,7 +197,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">pbisqlbox04.database.windows.net</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">pbisqlbox06.database.windows.net</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -224,16 +224,115 @@
                 <SSIS:Property SSIS:Name="Name">adfEtl</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{44A4DA40-5168-47E5-A10A-79835E35BB54}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{21E8AE84-3511-48D5-A34E-74810C56AB55}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
-              <SSIS:Parameters />
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="azureAnalysisServiceAdminLogin">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{9195E814-765E-4969-B157-CCCEA709528B}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">greg@golivewaad.onmicrosoft.com</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="azureAnalysisServiceAdminPassword">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{FCF45943-B5CF-4859-ADA2-090D26F01EAE}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">S7perSecr3t!</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="azureAnalysisServiceDbName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{AC213A19-40A2-4B47-9B5F-1D6F9F1F23C3}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">TabularProject1_Divin_453cf754-e5b2-4ddf-8b74-e2ecf361dab3</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="azureAnalysisServiceSvrName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{B0A95894-1864-4414-BE27-9BE30FC29F64}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">asazure://eastus.asazure.windows.net/pbissasserver07</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="filename">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{74DF04CD-662A-4D34-BCC0-41756CA8677A}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Customer1.ps1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="ProcessAnalysisServicesModel_Arguments">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{D00DE750-F8C5-4333-8E35-51550E42F3C3}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">"-F " + @[$Package::workingDir] +  @[$Package::filename] + "-aasAdminPassword" + @[$Package::aasAdminPassword]</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="workingDir">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{0434879A-3C52-4B72-946B-49FBE2912536}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">c:\ProcessModelScripts\</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
