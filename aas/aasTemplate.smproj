@@ -27,7 +27,7 @@
     <DeploymentServerName>asazure://eastus.asazure.windows.net/pbissasserver02</DeploymentServerName>
     <DeploymentServerEdition>Developer</DeploymentServerEdition>
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
-    <DeploymentServerDatabase>aas</DeploymentServerDatabase>
+    <DeploymentServerDatabase>aasTemplate</DeploymentServerDatabase>
     <DeploymentServerCubeName>Model</DeploymentServerCubeName>
     <DeploymentOptionProcessing>Default</DeploymentOptionProcessing>
     <DeploymentOptionTransactionalDeployment>False</DeploymentOptionTransactionalDeployment>
