@@ -5,10 +5,10 @@
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=sqldeveloper.eastus.cloudapp.azure.com;User ID=greg;Initial Catalog=AdventureWorks2016CTP3;Provider=SQLNCLI11.1;Auto Translate=False;">
+      DTS:ConnectionString="Data Source=sqldevelopertest.eastus.cloudapp.azure.com;User ID=greg;Initial Catalog=AdventureWorks2016CTP3;Provider=SQLNCLI11.1;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAACTOPMIjnPwRazps9p3YJLHrZzoEt6WZ+9Y5PO8zrnV0wAAAAAOgAAAAAIAACAAAAB2HJshM9dLvYs/tY1Vzo8VQIc11TxdFRQupQijy8LGWoAAAAD3bktjtAa0HNmLMfqAgOc1YRfU3DlbK2e/jVhpCk2t+RVCTeuVvKTZT1J2JG+gaSme0aCuu6CgAsOF+ARGV75k9V6w71/T3BeXAyLoiOJsuBZJ9hwS3+Hvbk2qjy4n7TaIdvekYBJoeo84dQbLrGMDwU3wInwvEReQY0f/9Foj/UAAAADGljv4POW98rbMwohaaKyxKsYBnoQ7C/eVXCKWQ/gQvdRJW8PdS6+/ShaHMc7NMxlaISbG5US4z/gIPzaUJv8a</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkZUqEWfAZE6rC/IUmQAx8wAAAAACAAAAAAAQZgAAAAEAACAAAAB/bNuKTJ/mZh5zEo8tvCsk1Ifb3SN+S3KK+kMynPsMfgAAAAAOgAAAAAIAACAAAAAUqBHpSyi+8kVZDGqBDVXdJfwqgBMlx/k9O2zMZYvDn4AAAABnnnaX4YSAkpOFiKw3lTKnQCvQHcVBYROCHPPukbYDpCELZWR+N31fy9YRCO20hi5I8CnCpUiVo7ZqmyL1bt394hQvDl2EGaOlxGWpFc/MQtGtum2FAuGEb4FLpQobCXT9I4fSA7f4h8lezGn07wiWsJUMqZ/mUVbM0M7idQ6kB0AAAAB+LawyDKincToVi16VxkAXbRB6J/AciTIIvsoMMkvPXBpCtBno+f6mguNXae9uhFVKWzIuAfuU2RYkgPdcFgTy</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

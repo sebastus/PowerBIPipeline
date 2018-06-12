@@ -1,2 +1,2 @@
-mkdir c:\devops
-copy invokeme.ps1 c:\devops
+mkdir c:\processModelScripts
+copy *.ps1 c:\processModelScripts

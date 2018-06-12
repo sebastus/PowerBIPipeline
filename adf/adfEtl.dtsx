@@ -11,10 +11,75 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="adfEtl"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{87F3252C-CE63-4C0A-B32E-C7325421563C}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{21E8AE84-3511-48D5-A34E-74810C56AB55}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{9195E814-765E-4969-B157-CCCEA709528B}"
+      DTS:ObjectName="azureAnalysisServiceAdminLogin">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">greg@golivewaad.onmicrosoft.com</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{FCF45943-B5CF-4859-ADA2-090D26F01EAE}"
+      DTS:ObjectName="azureAnalysisServiceAdminPassword">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">S7perSecr3t!</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{AC213A19-40A2-4B47-9B5F-1D6F9F1F23C3}"
+      DTS:ObjectName="azureAnalysisServiceDbName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">TabularProject1_Divin_453cf754-e5b2-4ddf-8b74-e2ecf361dab3</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B0A95894-1864-4414-BE27-9BE30FC29F64}"
+      DTS:ObjectName="azureAnalysisServiceSvrName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">asazure://eastus.asazure.windows.net/pbissasserver07</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{74DF04CD-662A-4D34-BCC0-41756CA8677A}"
+      DTS:ObjectName="filename">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">Customer1.ps1</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{D00DE750-F8C5-4333-8E35-51550E42F3C3}"
+      DTS:ObjectName="ProcessAnalysisServicesModel_Arguments">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">"-F " + @[$Package::workingDir] +  @[$Package::filename] + "-aasAdminPassword" + @[$Package::aasAdminPassword]</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{0434879A-3C52-4B72-946B-49FBE2912536}"
+      DTS:ObjectName="workingDir">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">c:\ProcessModelScripts\</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -496,6 +561,28 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Process Analysis Services Model"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{1F643109-F1E4-4076-9210-F921D3CCD685}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Process Analysis Services Model"
+      DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">"-F " + @[$Package::workingDir] +  @[$Package::filename] + " -aasAdminPassword \"" + @[$Package::azureAnalysisServiceAdminPassword] + "\"" +  " -dbName \"" + @[$Package::azureAnalysisServiceDbName]  + "\" " +  " -svrName \"" + @[$Package::azureAnalysisServiceSvrName]  + "\" " +  " -aasAdminLogin \"" + @[$Package::azureAnalysisServiceAdminLogin]  + "\" "</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="WorkingDirectory">@[$Package::workingDir]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="PowerShell.exe"
+          Arguments="-F c:\ProcessModelScripts\Customer1.ps1 -aasAdminPassword &quot;S7perSecr3t!&quot; -dbName &quot;TabularProject1_Divin_453cf754-e5b2-4ddf-8b74-e2ecf361dab3&quot;  -svrName &quot;asazure://eastus.asazure.windows.net/pbissasserver07&quot;  -aasAdminLogin &quot;greg@golivewaad.onmicrosoft.com&quot; "
+          WorkingDirectory="c:\ProcessModelScripts\" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Truncate Person Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -522,6 +609,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Copy Person Records" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F68375A7-6658-41D2-A362-77B42165891B}"
+      DTS:From="Package\Copy Person Records"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Process Analysis Services Model" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -534,11 +629,15 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="177.6,41.6"
           Id="Package\Copy Person Records"
           TopLeft="167.428574279863,197.600002771265" />
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\Process Analysis Services Model"
+          TopLeft="173.142860091462,299.76471008644" />
         <NodeLayout
           Size="184,41.6"
           Id="Package\Truncate Person Table"
@@ -557,6 +656,40 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,49.3941190284012" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="256.228574279863,239.200002771265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.9142858115994,60.5647073151748"
+              Start="0,0"
+              End="30.9142858115994,53.0647073151748">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2823536575874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2823536575874"
+                    Point2="0,30.2823536575874"
+                    Point3="4,30.2823536575874" />
+                  <mssgle:LineSegment
+                    End="26.9142858115994,30.2823536575874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.9142858115994,30.2823536575874"
+                    Point2="30.9142858115994,30.2823536575874"
+                    Point3="30.9142858115994,34.2823536575874" />
+                  <mssgle:LineSegment
+                    End="30.9142858115994,53.0647073151748" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
