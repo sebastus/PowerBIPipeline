@@ -7,6 +7,8 @@ Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "adf", "adf\adf.dtproj", "{0
 EndProject
 Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "aasTemplate", "aas\aasTemplate.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
 EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "aasCustomerA", "aasCustomerA\aasCustomerA.smproj", "{5B4633BC-C550-4ECC-B794-BD5F79BBE997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|x86 = Development|x86
@@ -17,6 +19,9 @@ Global
 		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
 		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
 		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
+		{5B4633BC-C550-4ECC-B794-BD5F79BBE997}.Development|x86.ActiveCfg = Development|x86
+		{5B4633BC-C550-4ECC-B794-BD5F79BBE997}.Development|x86.Build.0 = Development|x86
+		{5B4633BC-C550-4ECC-B794-BD5F79BBE997}.Development|x86.Deploy.0 = Development|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
