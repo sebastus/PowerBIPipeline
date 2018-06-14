@@ -1,2 +1,2 @@
 mkdir c:\processModelScripts
-copy *.ps1 c:\processModelScripts
+copy processASDatabase.ps1 c:\processModelScripts

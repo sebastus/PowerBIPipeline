@@ -3,7 +3,7 @@ $scriptPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 . "$scriptPath\common.ps1"
 
 # get my IP
-$response = wget -uri "ipinfo.io/ip"
+$response = Invoke-WebRequest -uri "ipinfo.io/ip"
 $externalIP = $response.Content
 $firstDot = $externalIP.indexOf(".")
 $secondDot = $externalIP.indexOf(".",$firstDot+1)

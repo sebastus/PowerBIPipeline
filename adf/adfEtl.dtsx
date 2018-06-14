@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="adfEtl"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{21E8AE84-3511-48D5-A34E-74810C56AB55}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{ABDED38B-332B-4D3A-BF71-8FC0AF47723A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -23,7 +23,7 @@
       DTS:ObjectName="azureAnalysisServiceAdminLogin">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">greg@golivewaad.onmicrosoft.com</DTS:Property>
+        DTS:Name="ParameterValue">me@mytenant.onmicrosoft.com</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -32,7 +32,7 @@
       DTS:ObjectName="azureAnalysisServiceAdminPassword">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">S7perSecr3t!</DTS:Property>
+        DTS:Name="ParameterValue">yourP@ssw0rd!</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -59,7 +59,7 @@
       DTS:ObjectName="filename">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">Customer1.ps1</DTS:Property>
+        DTS:Name="ParameterValue">processASDatabase.ps1</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -578,7 +578,7 @@
       <DTS:ObjectData>
         <ExecuteProcessData
           Executable="PowerShell.exe"
-          Arguments="-F c:\ProcessModelScripts\Customer1.ps1 -aasAdminPassword &quot;S7perSecr3t!&quot; -dbName &quot;TabularProject1_Divin_453cf754-e5b2-4ddf-8b74-e2ecf361dab3&quot;  -svrName &quot;asazure://eastus.asazure.windows.net/pbissasserver07&quot;  -aasAdminLogin &quot;greg@golivewaad.onmicrosoft.com&quot; "
+          Arguments="-F c:\ProcessModelScripts\processASDatabase.ps1 -aasAdminPassword &quot;yourP@ssw0rd!&quot; -dbName &quot;TabularProject1_Divin_453cf754-e5b2-4ddf-8b74-e2ecf361dab3&quot;  -svrName &quot;asazure://eastus.asazure.windows.net/pbissasserver07&quot;  -aasAdminLogin &quot;me@mytenant.onmicrosoft.com&quot; "
           WorkingDirectory="c:\ProcessModelScripts\" />
       </DTS:ObjectData>
     </DTS:Executable>
